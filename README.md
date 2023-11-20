@@ -76,3 +76,43 @@ No database is involved in the current implementation.
 
 *Conclusion:*
 The current implementation provides a functional chat application in both Python and Rust, offering insights into the language-specific considerations in terms of concurrency, error handling, and memory management. Future work could focus on expanding features and further optimizing performance.
+
+
+Steps for running both the applications.
+
+For the Python Applications
+Python is an interpreted language, so you don't need to compile the applications. Just run them directly. Make sure you have Python installed on your system.
+
+Open two terminal windows - one for the server and one for the client.
+
+Run the Server:
+Navigate to the directory containing server.py.
+Execute the command: python server.py (or python3 server.py depending on your Python installation).
+
+Run the Client:
+In the other terminal, navigate to the directory containing client.py.
+Execute the command: python client.py (or python3 client.py).
+
+
+For the Rust Applications
+Rust applications need to be compiled before they can be executed. Make sure you have Rust installed on your system, including Cargo, Rust's package manager and build system.
+
+Create a new Rust project for each application (if not already done):
+Use cargo new server and cargo new client to create new projects.
+Replace the contents of the main.rs files in each project with the code from your server.rs and client.rs files, respectively.
+Place any additional required files in the correct locations within each project structure.
+
+Compile and Run the Server:
+Navigate to the server project directory (where the Cargo.toml file is).
+Compile and run the server using cargo run.
+
+Compile and Run the Client:
+Open a new terminal window.
+Navigate to the client project directory.
+Compile and run the client using cargo run.
+
+Networking Considerations
+Make sure the server is running before starting the client.
+The Python and Rust applications might be using different ports (Python: 55555, Rust: 6000). Ensure they don't conflict with each other or with any other applications on your system.
+If you are running both the Python and Rust applications simultaneously, they should be configured to use different ports to avoid conflicts.
+
